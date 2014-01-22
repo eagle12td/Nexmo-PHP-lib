@@ -287,7 +287,7 @@ class NexmoMessage {
 	 */
 	private function validateOriginator($inp){
 		// Remove any invalid characters
-		$ret = preg_replace('/[^a-zA-Z0-9]/', '', (string)$inp);
+		$ret = preg_replace('/[^a-zA-Z0-9\.]/', '', (string)$inp);
 
 		if(preg_match('/[a-zA-Z]/', $inp)){
 
